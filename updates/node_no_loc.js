@@ -1,7 +1,7 @@
 function (doc, req) {
   var newdoc = JSON.parse(req.body);
-  if (newdoc.type != 'node' && newdoc.type != 'node_no_loc') {
-    return [null, 'Error: type != node'];
+  if (newdoc.type != 'node_no_loc') {
+    return [null, 'Error: type != node_no_loc'];
   }
   if (doc) {
     newdoc._id = doc._id;
